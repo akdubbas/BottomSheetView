@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollableBottomSheetViewController" customModule="BottomSheetsNew" customModuleProvider="target">
+            <connections>
+                <outlet property="CustomFooterView" destination="1xj-tA-I9x" id="vic-gb-Ld7"/>
+                <outlet property="customHeaderView" destination="Jqb-lC-sL5" id="SJW-bE-8Be"/>
+                <outlet property="headerView" destination="Jqb-lC-sL5" id="2Bt-iO-hyv"/>
+                <outlet property="saveTip" destination="c8l-F2-9KO" id="ehJ-zf-wU1"/>
+                <outlet property="tableView" destination="GSW-2o-otm" id="qZN-2R-jqt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Erf-d4-QVB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jqb-lC-sL5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhd-z7-b38" userLabel="100% of the tips go to your delivery person">
+                                    <rect key="frame" x="20" y="73" width="335" height="14"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="100% of the tips go to your delivery person ">
+                                            <attributes>
+                                                <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="12" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLo-9D-GuB">
+                                    <rect key="frame" x="20" y="20" width="335" height="28"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Select Tip Amount">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name=".SFNSText"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTn-ER-ncs">
+                                    <rect key="frame" x="20" y="93" width="335" height="14"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="Tips are always optional">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="12" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4z7-Ow-Gw9">
+                                    <rect key="frame" x="20" y="113" width="335" height="14"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="You can change your tip after your delivery">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="12" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" header="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstItem="4z7-Ow-Gw9" firstAttribute="top" secondItem="iTn-ER-ncs" secondAttribute="top" constant="20" id="7Ff-P1-t0b"/>
+                                <constraint firstItem="4z7-Ow-Gw9" firstAttribute="leading" secondItem="Jqb-lC-sL5" secondAttribute="leading" constant="20" id="Ai0-A2-eXM"/>
+                                <constraint firstItem="iTn-ER-ncs" firstAttribute="bottom" secondItem="Dhd-z7-b38" secondAttribute="bottom" constant="20" id="BN2-mb-KPI"/>
+                                <constraint firstItem="Dhd-z7-b38" firstAttribute="leading" secondItem="Jqb-lC-sL5" secondAttribute="leading" constant="20" id="I67-xN-Ort"/>
+                                <constraint firstItem="iTn-ER-ncs" firstAttribute="top" secondItem="Dhd-z7-b38" secondAttribute="top" constant="20" id="Ltb-Iy-uhY"/>
+                                <constraint firstAttribute="trailing" secondItem="iTn-ER-ncs" secondAttribute="trailing" constant="20" id="R13-ci-RFC"/>
+                                <constraint firstAttribute="height" constant="150" id="Tl2-jg-Adq"/>
+                                <constraint firstItem="iTn-ER-ncs" firstAttribute="leading" secondItem="Jqb-lC-sL5" secondAttribute="leading" constant="20" id="XdZ-Ts-arQ"/>
+                                <constraint firstItem="DLo-9D-GuB" firstAttribute="leading" secondItem="Jqb-lC-sL5" secondAttribute="leading" constant="20" id="eMO-Ce-Ugt"/>
+                                <constraint firstAttribute="trailing" secondItem="4z7-Ow-Gw9" secondAttribute="trailing" constant="20" id="gDI-YY-eiw"/>
+                                <constraint firstAttribute="trailing" secondItem="Dhd-z7-b38" secondAttribute="trailing" constant="20" id="kmk-Cd-v9q"/>
+                                <constraint firstAttribute="trailing" secondItem="DLo-9D-GuB" secondAttribute="trailing" constant="20" id="mK8-M3-NuF"/>
+                                <constraint firstItem="DLo-9D-GuB" firstAttribute="top" secondItem="Jqb-lC-sL5" secondAttribute="top" constant="20" id="xCk-qn-RdP"/>
+                                <constraint firstItem="Dhd-z7-b38" firstAttribute="top" secondItem="DLo-9D-GuB" secondAttribute="bottom" constant="25" id="xRN-tJ-1xy"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-2o-otm">
+                            <rect key="frame" x="0.0" y="150" width="375" height="389"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xj-tA-I9x" userLabel="Footer">
+                            <rect key="frame" x="0.0" y="539" width="375" height="128"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8l-F2-9KO">
+                                    <rect key="frame" x="20" y="39" width="335" height="50"/>
+                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="ZqI-n4-fRW"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Save Tip">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="c8l-F2-9KO" firstAttribute="centerX" secondItem="1xj-tA-I9x" secondAttribute="centerX" id="ZjL-k9-laP"/>
+                                <constraint firstItem="c8l-F2-9KO" firstAttribute="leading" secondItem="1xj-tA-I9x" secondAttribute="leading" constant="20" id="dQB-9B-Zqu"/>
+                                <constraint firstItem="c8l-F2-9KO" firstAttribute="centerY" secondItem="1xj-tA-I9x" secondAttribute="centerY" id="sl6-hf-fW4"/>
+                                <constraint firstAttribute="trailing" secondItem="c8l-F2-9KO" secondAttribute="trailing" constant="20" id="uxc-ZL-D46"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="1xj-tA-I9x" secondAttribute="bottom" id="3Qw-7i-vMI"/>
+                        <constraint firstAttribute="trailing" secondItem="Jqb-lC-sL5" secondAttribute="trailing" id="Avl-f9-7eb"/>
+                        <constraint firstItem="Jqb-lC-sL5" firstAttribute="top" secondItem="Erf-d4-QVB" secondAttribute="top" id="CbQ-VH-65W"/>
+                        <constraint firstItem="1xj-tA-I9x" firstAttribute="leading" secondItem="Erf-d4-QVB" secondAttribute="leading" id="J0p-w6-wHE"/>
+                        <constraint firstAttribute="trailing" secondItem="1xj-tA-I9x" secondAttribute="trailing" id="tbz-eG-FgX"/>
+                        <constraint firstItem="1xj-tA-I9x" firstAttribute="top" secondItem="Erf-d4-QVB" secondAttribute="top" constant="539" id="vsJ-qj-flr"/>
+                        <constraint firstItem="Jqb-lC-sL5" firstAttribute="leading" secondItem="Erf-d4-QVB" secondAttribute="leading" id="w69-kf-9MO"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Erf-d4-QVB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IjB-g2-fdc"/>
+                <constraint firstItem="Erf-d4-QVB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QDP-LU-ozz"/>
+                <constraint firstAttribute="bottom" secondItem="Erf-d4-QVB" secondAttribute="bottom" id="Yc9-9T-ctS"/>
+                <constraint firstAttribute="trailing" secondItem="Erf-d4-QVB" secondAttribute="trailing" id="ibQ-ba-cnb"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
