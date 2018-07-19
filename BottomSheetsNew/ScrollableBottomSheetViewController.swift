@@ -9,6 +9,8 @@
 import UIKit
 
 class ScrollableBottomSheetViewController: UIViewController {
+    
+    
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tableView: UITableView!
 
@@ -20,7 +22,7 @@ class ScrollableBottomSheetViewController: UIViewController {
     
     let fullView: CGFloat = 100
     var partialView: CGFloat {
-        return UIScreen.main.bounds.height - 150
+        return UIScreen.main.bounds.height/2 // - 150
     }
     
     lazy var myView : UIView = {
@@ -46,12 +48,26 @@ class ScrollableBottomSheetViewController: UIViewController {
         
         myView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         myView.layer.cornerRadius = 3
+        
         let gesture = UIPanGestureRecognizer.init(target: self, action: #selector(ScrollableBottomSheetViewController.panGesture))
         gesture.delegate = self
         view.addGestureRecognizer(gesture)
         roundViews()
     }
     
+    
+    @IBAction func dimsiss(_ sender: Any) {
+      dimissTippingView()
+    }
+    
+    func dimissTippingView()
+    {
+        UIView.animate(withDuration: 0.8,
+                       animations: {self.view.alpha = 0.0},
+                       completion: {(value: Bool) in
+                        self.view.removeFromSuperview()
+        })
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareBackgroundView()
@@ -95,7 +111,10 @@ class ScrollableBottomSheetViewController: UIViewController {
             
             UIView.animate(withDuration: duration, delay: 0.0, options: [.allowUserInteraction], animations: {
                 if  velocity.y >= 0 {
-                    self.view.frame = CGRect(x: 0, y: self.partialView, width: self.view.frame.width, height: self.view.frame.height)
+                    
+                    self.dimissTippingView()
+                    //self.view.removeFromSuperview()
+                    //self.view.frame = CGRect(x: 0, y: self.partialView, width: self.view.frame.width, height: self.view.frame.height)
                 } else {
                     self.view.frame = CGRect(x: 0, y: self.fullView, width: self.view.frame.width, height: self.view.frame.height)
                 }
@@ -103,6 +122,7 @@ class ScrollableBottomSheetViewController: UIViewController {
                 }, completion: { [weak self] _ in
                     if ( velocity.y < 0 ) {
                         self?.tableView.isScrollEnabled = true
+                        
                     }
             })
         }
