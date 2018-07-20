@@ -42,7 +42,8 @@ class ScrollableBottomSheetViewController: UIViewController {
         tableView.tableHeaderView = customHeaderView
         saveTip.layer.cornerRadius = 5
         saveTip.layer.masksToBounds = true
-        
+        saveTip.backgroundColor = UIColor.rgb(red: 0, green: 120, blue: 204)
+        saveTip.addTarget(self, action: #selector(handleDismiss), for: .touchUpInside)
         self.view.addSubview(myView)
         myView.anchor(top: self.view.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 5, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 5)
         
@@ -54,15 +55,14 @@ class ScrollableBottomSheetViewController: UIViewController {
         view.addGestureRecognizer(gesture)
         roundViews()
     }
-    
-    
-    @IBAction func dimsiss(_ sender: Any) {
-      dimissTippingView()
+    @objc func handleDismiss()
+    {
+        dimissTippingView()
     }
     
     func dimissTippingView()
     {
-        UIView.animate(withDuration: 0.8,
+        UIView.animate(withDuration: 0.5,
                        animations: {self.view.alpha = 0.0},
                        completion: {(value: Bool) in
                         self.view.removeFromSuperview()
@@ -73,6 +73,7 @@ class ScrollableBottomSheetViewController: UIViewController {
         prepareBackgroundView()
     }
     
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

@@ -20,7 +20,7 @@ class TippingHeaderView : UICollectionViewCell
         let label = UILabel()
         label.numberOfLines = 0
         
-        let attributedText = NSMutableAttributedString(string: selectTipAmount+"\n", attributes:[NSAttributedStringKey.foregroundColor :UIColor.black,NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 20)])
+        let attributedText = NSMutableAttributedString(string: selectTipAmount+"\n", attributes:[NSAttributedStringKey.foregroundColor :UIColor.black,NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 24)])
         label.attributedText = attributedText
         return label
     }()
@@ -63,7 +63,7 @@ class TippingHeaderView : UICollectionViewCell
         addSubview(tip2Label)
         addSubview(tip3Label)
         
-        selectTip.anchor(top: topAnchor, left: leftAnchor, bottom: tip1Label.topAnchor, right: rightAnchor, paddingTop: 0, paddingLeft: 15, paddingBottom:0, paddingRight: -5, width: 0, height: 0)
+        selectTip.anchor(top: topAnchor, left: leftAnchor, bottom: tip1Label.topAnchor, right: rightAnchor, paddingTop: 15, paddingLeft: 15, paddingBottom:0, paddingRight: -5, width: 0, height: 0)
         tip1Label.anchor(top: selectTip.bottomAnchor, left: leftAnchor, bottom: tip2Label.topAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 15, paddingBottom:0, paddingRight: -5, width: 0, height: 0)
         tip2Label.anchor(top: tip1Label.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 2, paddingLeft: 15, paddingBottom:0, paddingRight: -5, width: 0, height: 0)
         tip3Label.anchor(top: tip2Label.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, paddingTop: 2, paddingLeft: 15, paddingBottom:0, paddingRight: -5, width: 0, height: 0)
