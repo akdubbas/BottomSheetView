@@ -16,7 +16,7 @@ class TippingViewCell : UICollectionViewCell
         let label = UILabel()
         label.text = "Exhibit Name"
         label.numberOfLines = 0
-        label.font  = UIFont.systemFont(ofSize: 14)
+        label.font  = UIFont.systemFont(ofSize: 16)
         return label
     }()
     

@@ -16,6 +16,7 @@ class TippingFooterViewCell :UICollectionViewCell {
         button.setTitle("Save Tip", for: .normal)
         button.backgroundColor = UIColor.rgb(red: 0, green: 120, blue: 204)
         button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(UIColor.white, for: .normal)
         button.isEnabled = true
         return button
@@ -31,9 +32,10 @@ class TippingFooterViewCell :UICollectionViewCell {
         separatorView.anchor(top: topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 40, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0.5)
         
         addSubview(myButton)
-        myButton.anchor(top: separatorView.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom:0, paddingRight: 0, width: 300, height: 50)
+        myButton.anchor(top: separatorView.topAnchor, left: nil, bottom: nil, right: nil, paddingTop: 10, paddingLeft: 0, paddingBottom:0, paddingRight: 0, width: 0, height: 50)
         
         myButton.centerXAnchor.constraint(equalTo:centerXAnchor).isActive = true
+        myButton.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -24).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {

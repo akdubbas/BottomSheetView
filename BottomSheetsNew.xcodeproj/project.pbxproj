@@ -26,6 +26,8 @@
 		AFA9B04C20FE1CA900DF05B6 /* ScrollableBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA9B04A20FE1CA900DF05B6 /* ScrollableBottomSheetViewController.xib */; };
 		AFA9B04F20FE1D5400DF05B6 /* DefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA9B04D20FE1D5400DF05B6 /* DefaultTableViewCell.swift */; };
 		AFA9B05020FE1D5400DF05B6 /* DefaultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA9B04E20FE1D5400DF05B6 /* DefaultTableViewCell.xib */; };
+		AFF0CD542100F880006E003D /* PushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0CD532100F880006E003D /* PushController.swift */; };
+		AFF0CD562100FAD8006E003D /* PresentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0CD552100FAD8006E003D /* PresentController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		AFA9B04A20FE1CA900DF05B6 /* ScrollableBottomSheetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableBottomSheetViewController.xib; sourceTree = "<group>"; };
 		AFA9B04D20FE1D5400DF05B6 /* DefaultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTableViewCell.swift; sourceTree = "<group>"; };
 		AFA9B04E20FE1D5400DF05B6 /* DefaultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultTableViewCell.xib; sourceTree = "<group>"; };
+		AFF0CD532100F880006E003D /* PushController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushController.swift; sourceTree = "<group>"; };
+		AFF0CD552100FAD8006E003D /* PresentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				AFA9B04320FCEC2D00DF05B6 /* TippingViewCell.swift */,
 				AFA9B04520FCF0F600DF05B6 /* TippingFooterViewCell.swift */,
 				AFA9B04720FD1BAC00DF05B6 /* TippingHeaderView.swift */,
+				AFF0CD532100F880006E003D /* PushController.swift */,
+				AFF0CD552100FAD8006E003D /* PresentController.swift */,
 			);
 			path = BottomSheetsNew;
 			sourceTree = "<group>";
@@ -301,11 +307,13 @@
 				AF5B6EC020F6578A0067903B /* ViewController.swift in Sources */,
 				AF5B6EBE20F6578A0067903B /* AppDelegate.swift in Sources */,
 				AF5B6EF120F657E00067903B /* BottomViewController.swift in Sources */,
+				AFF0CD562100FAD8006E003D /* PresentController.swift in Sources */,
 				AFA9B04F20FE1D5400DF05B6 /* DefaultTableViewCell.swift in Sources */,
 				AFA9B04620FCF0F600DF05B6 /* TippingFooterViewCell.swift in Sources */,
 				AF5B6EC620F6578A0067903B /* BottomSheetsNew.xcdatamodeld in Sources */,
 				AF5B6EEF20F657AE0067903B /* MapViewController.swift in Sources */,
 				AFA9B04820FD1BAC00DF05B6 /* TippingHeaderView.swift in Sources */,
+				AFF0CD542100F880006E003D /* PushController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
